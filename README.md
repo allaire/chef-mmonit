@@ -44,4 +44,4 @@ We strongly believe in open-source and that's why we try hard to share as much a
 
 ## License
 
-`chef-mmonit` is © [Lodgem](http://www.lodgem.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).  See the [`LICENSE.md`](https://github.com/lodgem/chef-mmonit/blob/master/LICENSE.md) file for more information.
+`chef-mmonit` is © [Lodgem](http://www.lodgem.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).  See the [`LICENSE.md`](https://github.com/lodgem/chef-mmonit/blob/master/LICENSE) file for more information.
