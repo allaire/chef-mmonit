@@ -14,7 +14,7 @@ Please refer to the `attributes/default.rb` file for now.
 
 ## Usage
 
-Simply include `mmonit` in your node's run_list :
+Simply include `mmonit` in a role or in your node's run_list :
 
 ```
 {
@@ -36,12 +36,14 @@ Or include the recipe in a wrapper cookbook :
 3. Write you change
 4. Submit a Pull Request
 
-## About Lodgem
+## About
 
-Lodgem is small team of passionate who love creating polished applications that solve interesting problems. We consider ourselves as friendly, hard workers and dynamic. We love to see things differently and strongly believe in progress and innovation.
+![image](http://lodgem.s3.amazonaws.com/tm/logotype.png)
 
-We strongly believe in open-source and that's why we try hard to share as much as possible.
+Lodgem is small team of passionate who enjoy creating polished applications that solve interesting problems. We consider ourselves as friendly, hard workers and dynamic. We love to see things differently and strongly believe in progress and innovation.
+
+At Lodgem, we use open source software a lot and that's why we try hard to share as much as possible.
 
 ## License
 
-`chef-mmonit` is © [Lodgem](http://www.lodgem.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).  See the [`LICENSE.md`](https://github.com/lodgem/chef-mmonit/blob/master/LICENSE) file for more information.
+`chef-mmonit` is © [Lodgem Inc.](http://www.lodgem.com) It is free software and may be redistributed under the terms specified in the LICENSE file.
