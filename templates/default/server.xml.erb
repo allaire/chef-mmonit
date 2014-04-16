@@ -83,7 +83,7 @@
            DNS lookups will have an adverse impact on performance if you use
            an Access Logger.
        -->
-       <Connector address="*" port="8080" processors="10" />
+       <Connector address="*" port="<%= node['mmonit']['port'] %>" processors="10" />
 
        <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 -->
 
@@ -363,12 +363,8 @@
        </Engine>
    </Service>
 
-   <License owner="Tildeslash Ltd. - Trial License">
-       N6VNPWIMCW-5J6ZICHSEI-NDEH7UZUX3-N6QWMDWBEQ-HKZR2CUMMV
-       KJTHAW5FDC-VL2RDFBHUQ-XMNOIRY3MG-5Z7EPFKECN-BEJ4GD75B5
-       R3LMRTLZAY-576TLQKXRX-NZZYZQO32P-JMBG3LFBZD-V7MZ7UVCYG
-       A345J45SOX-VSGVPANFEL-YNDACE7IKL-FOTXQWPFBW-YUM5W54Y6J
-       MPVAW
+   <License owner="<%= node['mmonit']['license_owner'] %>">
+   <%= node['mmonit']['license'] %>
    </License>
 
 </Server>
