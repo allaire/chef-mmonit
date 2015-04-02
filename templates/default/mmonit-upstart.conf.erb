@@ -23,6 +23,6 @@ stop on runlevel [!2345]
 expect daemon
 respawn
 
-exec <%= node['mmonit']['dir'] %>/bin/mmonit
+exec <%= node["mmonit"]["dir"] %>/bin/mmonit
 
-pre-stop exec <%= node['mmonit']['dir'] %>/bin/mmonit stop
+pre-stop exec <%= node["mmonit"]["dir"] %>/bin/mmonit stop

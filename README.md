@@ -20,7 +20,7 @@ Simply include `mmonit` in a role or in your node's run_list :
 {
   "name":"my_node",
   "run_list": [
-    "recipe[mmonit::default]"
+  "recipe[mmonit::default]"
   ]
 }
 ```
