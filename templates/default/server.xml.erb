@@ -184,11 +184,17 @@
 
                Only one Realm database should be defined in this file.
            -->
+           
+           <Realm url="<%= node["mmonit"]["db"]["url"] %>" 
+                  minConnections="<%= node["mmonit"]["db"]["minConnections"] %>"
+                  maxConnections="<%= node["mmonit"]["db"]["maxConnections"] %>"
+                  reapConnections="<%= node["mmonit"]["db"]["reapConnections"] %>" />
+           
+           <!--
            <Realm url="sqlite:///db/mmonit.db?synchronous=normal&heap_limit=8000&foreign_keys=on&journal_mode=wal"
                   minConnections="5"
                   maxConnections="25"
                   reapConnections="300" />
-           <!--
            <Realm url="mysql://mmonit:mmonit@127.0.0.1/mmonit"
                   minConnections="5"
                   maxConnections="25"
