@@ -2,7 +2,7 @@
 # Cookbook Name:: mmonit
 # Recipe:: default
 #
-# Copyright (C) Lodgem Inc.
+# Copyright (C) Mathieu Allaire
 #
 
 src_filepath = "#{Chef::Config['file_cache_path']}/#{node['mmonit']['source']['filename']}"
