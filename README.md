@@ -36,14 +36,6 @@ Or include the recipe in a wrapper cookbook :
 3. Write you change
 4. Submit a Pull Request
 
-## About
-
-![image](http://lodgem.s3.amazonaws.com/tm/logotype.png)
-
-Lodgem is small team of passionate who enjoy creating polished applications that solve interesting problems. We consider ourselves as friendly, hard workers and dynamic. We love to see things differently and strongly believe in progress and innovation.
-
-At Lodgem, we use open source software a lot and that's why we try hard to share as much as possible.
-
 ## License
 
-`chef-mmonit` is © [Lodgem Inc.](http://www.lodgem.com) It is free software and may be redistributed under the terms specified in the LICENSE file.
+It is free software and may be redistributed under the terms specified in the LICENSE file.
