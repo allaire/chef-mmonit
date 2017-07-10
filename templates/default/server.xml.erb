@@ -83,7 +83,20 @@
            DNS lookups will have an adverse impact on performance if you use
            an Access Logger.
        -->
-       <Connector address="*" port="<%= node['mmonit']['port'] %>" processors="10" />
+       <Connector
+            address="*"
+            port="<%= node['mmonit']['port'] %>"
+            processors="10"
+            <% if node['mmonit']['proxy_scheme'] %>
+            proxyScheme="<%= node['mmonit']['proxy_scheme'] %>"
+            <% end %>
+            <% if node['mmonit']['proxy_name'] %>
+            proxyName="<%= node['mmonit']['proxy_name'] %>"
+            <% end %>
+            <% if node['mmonit']['proxy_port'] %>
+            proxyPort="<%= node['mmonit']['proxy_port'] %>"
+            <% end %>
+        />
 
        <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 -->
 
@@ -184,12 +197,12 @@
 
                Only one Realm database should be defined in this file.
            -->
-           
-           <Realm url="<%= node["mmonit"]["db"]["url"] %>" 
+
+           <Realm url="<%= node["mmonit"]["db"]["url"] %>"
                   minConnections="<%= node["mmonit"]["db"]["minConnections"] %>"
                   maxConnections="<%= node["mmonit"]["db"]["maxConnections"] %>"
                   reapConnections="<%= node["mmonit"]["db"]["reapConnections"] %>" />
-           
+
            <!--
            <Realm url="sqlite:///db/mmonit.db?synchronous=normal&heap_limit=8000&foreign_keys=on&journal_mode=wal"
                   minConnections="5"

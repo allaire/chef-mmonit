@@ -10,3 +10,7 @@ default["mmonit"]["db"]["url"] = "sqlite:///db/mmonit.db?synchronous=normal&heap
 default["mmonit"]["db"]["minConnections"] = "5"
 default["mmonit"]["db"]["maxConnections"] = "25"
 default["mmonit"]["db"]["reapConnections"] = "300"
+
+default["mmonit"]["proxy_scheme"] = nil
+default["mmonit"]["proxy_name"] = nil
+default["mmonit"]["proxy_port"] = nil
