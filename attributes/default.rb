@@ -14,3 +14,10 @@ default["mmonit"]["db"]["reapConnections"] = "300"
 default["mmonit"]["proxy_scheme"] = nil
 default["mmonit"]["proxy_name"] = nil
 default["mmonit"]["proxy_port"] = nil
+
+
+default['mmonit']['init_style'] = if node['platform'] == 'ubuntu' && node['platform_version'].to_f <= 14.04
+                                   'upstart'
+                                 else
+                                   node['init_package']
+end
