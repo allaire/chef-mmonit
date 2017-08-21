@@ -33,15 +33,27 @@ template "#{node['mmonit']['dir']}/conf/server.xml" do
   notifies :restart, "service[mmonit]"
 end
 
-template "/etc/init/mmonit.conf" do
-  source "mmonit-upstart.conf.erb"
-  owner  "root"
-  group  "root"
-  mode   "0644"
+# Upstart
+if node['mmonit']['init_style'] == 'upstart'
+  template "/etc/init/mmonit.conf" do
+    source "mmonit-upstart.conf.erb"
+    owner  "root"
+    group  "root"
+    mode   "0644"
+  end
+end
+
+# Systemd
+if node['mmonit']['init_style'] == 'systemd'
+  template "/etc/systemd/system/mmonit.service" do
+    source "mmonit.service.erb"
+    owner "root"
+    group "root"
+    mode  "0644"
+  end
 end
 
 service "mmonit" do
-  provider Chef::Provider::Service::Upstart
   supports status: true, restart: true, reload: true
   action   [:enable, :start]
 end

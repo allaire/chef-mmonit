@@ -1,0 +1,12 @@
+[Unit]
+Description=M/Monit system monitoring
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=<%=node["mmonit"]["dir"] %>
+ExecStart=<%=node["mmonit"]["dir"] %>/bin/mmonit -i
+ExecStop=<%=node["mmonit"]["dir"] %>/bin/mmonit stop
+
+[Install]
+WantedBy=multi-user.target
